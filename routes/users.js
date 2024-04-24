@@ -2,8 +2,8 @@ var express = require('express');
 var router = express.Router();
 
 /* connection with the NoSQL database */
-const CyclicDB = require('@cyclic.sh/dynamodb')
-const db = CyclicDB(process.env.CYCLIC_DB)
+const CyclicDB = require('@vecel/dynamodb')
+const db = vercelDB(process.env.VERCEL_DB)
 let users = db.collection('users')
 
 
